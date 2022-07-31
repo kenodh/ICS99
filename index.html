@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ICS99 Store</title>
+    <style>
+      body {
+        background-color: #ABC8B0;
+      }
+    </style>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        #myInput {
+          background-image: url('search.png');
+          background-position: 5px 7px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        #myTable {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          font-size: 18px;
+        }
+        
+        #myTable th, #myTable td {
+          text-align: left;
+          padding: 12px;
+        }
+        
+        #myTable tr {
+          border-bottom: 1px solid #ddd;
+        }
+        
+        #myTable tr.header, #myTable tr:hover {
+          background-color: #f1f1f1;
+        }
+        </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  </head>
+  <body>
+<div style="text-align: center; margin-top: 200px;">
+    <h1 style="font-size: 110px; font-family: LCD-Solid;"><strong>ICS99</strong></h1>
+</div>
+<br>
+<br>
+  <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search" title="Type to search" style="font-family: LCD-Solid;">
+
+<table id="myTable">
+  <tr class="header">
+  </tr>
+  <tr>
+    <td><a href="store.html" style="font-family: LCD-Solid;">ICS Store</a></td>
+  </tr>
+  <tr>
+    <td><a href="account.html" download="" style="font-family: LCD-Solid;">My Account</a></td>
+  </tr>
+  <tr>
+    <td><a href="projects.html" download="" style="font-family: LCD-Solid;">Our projects</a></td>
+  </tr>
+  <tr>
+    <td><a href="workspace.html" download="" style="font-family: LCD-Solid;">ICS Workspace version 1.0</a></td>
+  </tr>
+  <tr>
+    <td><a href="map.html" download="" style="font-family: LCD-Solid;">ICS Map</a></td>
+  </tr>
+</table>
+
+<script>
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("myTable");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+</script>
+  
+
+
+
+</body>
+</html>

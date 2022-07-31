@@ -1,0 +1,1 @@
+start "" "http://web.archive.org/web/20050304061814/http://www.tiktok.com/"

@@ -1,0 +1,1 @@
+start "" "http://web.archive.org/web/20041001050342/http://www.domainduck.com/"
